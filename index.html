@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <title>Ejercicios</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <script src="js/jquery.min.js"></script> 
+  <script src="https://unpkg.com/@popperjs/core@2"></script> 
+  <script src="js/bootstrap.min.js"></script> 
+  <script src="ejercicios.js"></script>
+
+<!-- Incluye Libreria -->
+<link rel="stylesheet" href="styles/monokai-sublime.min.css">
+<script src="highlight.min.js"></script>
+<!-- Inicializa Resaltado -->
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body style= "background-color:#f5f5f7">
+<header>
+<nav class="navbar navbar-expand-sm navbar-light bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="color:white">Practica</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"style="color:white" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:white">Tecnologias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:white">Futuro</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"  aria-expanded="false" style="color:white">
+            Ejercicios
+          </a>
+          <ul class="dropdown-menu bg-secondary text-center"style="background:red" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#ej1" > ajaNumeros par del 0 al 10</a></li>
+            <li><a class="dropdown-item" href="#ej2">Tabla del 1 al 12</a></li>
+            <li><a class="dropdown-item" href="#ej3">Convertir de kilometro a millas y viseversa</a></li>
+            <li><a class="dropdown-item" href="#ej4">Sumar todos los valores de un array</a></li>
+            <li><a class="dropdown-item" href="#ej5">Invertir valores de un array</a></li>
+            <li><a class="dropdown-item" href="#ej6">Organizar array de menor a mayor</a></li>
+            <li><a class="dropdown-item" href="#ej7">Filtrar numeros negativos</a></li>
+            <li><a class="dropdown-item" href="#ej8">Remover espacios en un string</a></li>
+            <li><a class="dropdown-item" href="#ej9">Determinar si el numero es divisible entre 10</a></li>
+            <li><a class="dropdown-item" href="#ej10">Contar vocales</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</header>
+<!-- Carrusel de imagenes -->
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="code-1839406_640.jpg" class="d-block w-100 " style="height:500px; max-width:100%" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="programming-1873854_1920.png" class="d-block w-100" style="height:500px; max-width:100%" alt="...">
+    </div>
+  </div>
+</div>
+<!-- Fin de carrusel -->
+<div class="container-fluid  d-grid gap-5 mt-5">
+<!-- Ejercicio1 -->
+<div class="row justify-content-center ">
+  <div class="col-sm-5" id="ej1">
+    <div class="card text-center">
+      <div class="card-body ">
+        <h5 class="card-title">Ejercicio 1</h5>
+        <p class="card-text">Imprimir numeros pares entre 0 y 10.</p>
+        
+        <p>
+          <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="boton1" onclick="cambiartexto('boton1')">Ver codigo</button>
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <pre>
+            <code class="language-javascript text-wrap" contenteditable="true" id="codigo">
+       for ( let i = 0; i <= 10; i ++) 
+       document.getElementById('add_after_me').innerHTML+= i++; 
+      }
+      { 
+            </code>
+              </pre>
+          </div>
+          <button class="btn btn-secondary mt-3"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" onclick="agregarcodigo('codigo','add_after_me')">Probar codigo</button>
+
+          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header d-flex justify-content-center">
+              <h5 class="offcanvas-title  " id="offcanvasBottomLabel">Imprimir numeros pares entre 0 y 10.</h5>
+              
+               <button type="button" class="btn-close btn-secondary text-reset " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+                <div class="offcanvas-body small" id="add_after_me">
+                 
+                </div>
+          </div>
+          
+          <!-- final de colapse -->
+        </div> 
+       
+      </div>
+    
+  </div>
+</div>
+<!-- Ejercicio 2 -->
+  <div class="col-sm-5 mt-5 mt-sm-0" id="ej2">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Ejercicio 2</h5>
+        <p class="card-text">Imprimir tabla del 1 al 12</p>
+        <p>
+          <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample" id="boton2" onclick="cambiartexto('boton2')">
+            Ver codigo
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample1">
+          <div class="card card-body">
+            <pre>
+            <code class="language-javascript text-wrap" contenteditable="true" id="codigo2">
+               for (let i = 1; i <= 12; i++)
+               {
+                 for (let x = 1; x <= 12; x++) 
+                 { r=i*x;
+                  document.getElementById('add_after_me2').innerText+=" "+i+" x "+x+" = "+ r + "\n";
+                } ;}         </code></pre>
+              
+          </div>
+          <button class="btn btn-secondary mt-3"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom2" aria-controls="offcanvasBottom" onclick="agregarcodigo('codigo2','add_after_me2')">Probar codigo</button>
+
+          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom2" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header d-flex justify-content-center">
+              <h5 class="offcanvas-title" id="offcanvasBottomLabel">Imprimir tabla del 1 al 12</h5>
+              
+               <button type="button" class="btn-close btn-secondary text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+                <div class="offcanvas-body small" id="add_after_me2">
+                  
+                </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+</div>
+</div>
+<!-- Ejercicio 3 -->
+<div class="row justify-content-center">
+  <div class="col-sm-5" id="ej3">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Ejercicio 3</h5>
+        <p class="card-text">Convertir de kilometro a millas y viseversa</p>
+        
+        <p>
+          <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample" id="boton3" onclick="cambiartexto('boton3')">
+            Ver codigo
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample3">
+          <div class="card card-body">
+            <pre>
+            <code class="language-javascript text-wrap" contenteditable="true" id="codigo3">
+                function KM(valor){
+                let resultado = valor / 1.6;
+                document.getElementById('add_after_me3').innerHTML+= resultado;
+                };
+                function MK(valor){
+                let resultado = valor * 1.6;
+                document.getElementById('add_after_me3').innerHTML+= resultado;
+                }
+                let operacion = prompt("Seleccione la operacion\n "+"1-Kilometro a milla\n"+"2-Milla a kilometro");
+                if (operacion == "1"){
+                     let kilo = prompt("Indique los kilometros:");
+                     KM(kilo);
+                }
+                else if (operacion == "2"){
+                let milla = prompt("Indique las millas:");
+                
+                     MK(milla);
+                }
+                else {
+                document.getElementById('add_after_me3').innerHTML+="dato invalido";
+                  };
+
+                  
+                </code></pre>
+              
+          </div>
+          <button class="btn btn-secondary mt-3"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom3" aria-controls="offcanvasBottom" onclick="agregarcodigo('codigo3','add_after_me3')">Probar codigo</button>
+
+          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom3" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header d-flex justify-content-center">
+              <h5 class="offcanvas-title" id="offcanvasBottomLabel">Convertir de kilometro a millas y viseversa</h5>
+              
+               <button type="button" class="btn-close btn-secondary text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+                <div class="offcanvas-body small" id="add_after_me3">
+                 
+                </div>
+          </div>
+          <!-- final de colapse -->
+        </div> 
+       
+      </div>
+    </div>
+  </div>
+<!-- Ejercicio 4 -->
+  <div class="col-sm-5  mt-5 mt-sm-0" id="ej4">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Ejercicio 4</h5>
+        <p class="card-text">Sumar todos los valores de un array</p>
+        
+        <p>
+          <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample"id="boton4" onclick="cambiartexto('boton4')">
+            Ver codigo
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample4">
+          <div class="card card-body">
+            <pre>
+            <code class="language-javascript text-wrap" contenteditable="true" id="codigo4">
+              let array1 = [2,-3,4,-6,8];
+              let sumatoria1 = 0;
+              let array2 = [3,2.37,6.48,5.24];
+              let sumatoria2 = 0;
+              for (let i of array1){
+              sumatoria1 += i;
+              }
+              document.getElementById('add_after_me4').innerText+= sumatoria1 + " la sumatoria de valores negativos y positivos </br>"+"\n";
+              for (let i of array2){
+              sumatoria2 += i;
+              }
+              document.getElementById('add_after_me4').innerText+= sumatoria2 + " la sumatoria de valores enteros y decimaless \n";
+                </code></pre>
+              
+          </div>
+          <button class="btn btn-secondary mt-3"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom4" aria-controls="offcanvasBottom" onclick="agregarcodigo('codigo4','add_after_me4')">Probar codigo</button>
+
+          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom4" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header d-flex justify-content-center">
+              <h5 class="offcanvas-title" id="offcanvasBottomLabel">Sumar todos los valores de un array</h5>
+              
+               <button type="button" class="btn-close btn-secondary text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+                <div class="offcanvas-body small" id="add_after_me4">
+                
+                </div>
+          </div>
+          <!-- final de colapse -->
+        </div> 
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Ejercicio 5 -->
+<div class="row justify-content-center">
+  <div class="col-sm-5" id="ej5">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Ejercicio 5</h5>
+        <p class="card-text">Invertir valores de un array</p>
+        
+        <p>
+          <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample" id="boton5" onclick="cambiartexto('boton5')">
+            Ver codigo
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample5">
+          <div class="card card-body">
+            <pre>
+            <code class ="language-javascript text-wrap"contenteditable="true" id="codigo5">
+              let array3 = [1,2,3,4,5];
+
+              document.getElementById('add_after_me5').innerText+="Orden correcto "+ array3 + "\n<br>";
+              array3.reverse();
+              document.getElementById('add_after_me5').innerText+="Al reves "+ array3 + "<br>";
+                </code></pre>
+              
+          </div>
+          <button class="btn btn-secondary mt-3"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom5" aria-controls="offcanvasBottom" onclick="agregarcodigo('codigo5','add_after_me5')">Probar codigo</button>
+
+          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom5" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header d-flex justify-content-center">
+              <h5 class="offcanvas-title" id="offcanvasBottomLabel">Invertir valores de un array</h5>
+              
+               <button type="button" class="btn-close btn-secondary text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+                <div class="offcanvas-body small" id="add_after_me5">
+             
+                </div>
+          </div>
+          <!-- final de colapse -->
+        </div> 
+       
+      </div>
+    </div>
+  </div>
+<!-- Ejercicio 6 -->
+<div class="col-sm-5  mt-5 mt-sm-0" id="ej6">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Ejercicio 6</h5>
+        <p class="card-text">Organizar valores de un array de menor a mayor</p>
+        
+        <p>
+          <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample"id="boton6" onclick="cambiartexto('boton6')">
+            Ver codigo
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample6">
+          <div class="card card-body">
+            <pre>
+            <code class ="language-javascript text-wrap" contenteditable="true" id="codigo6">
+        let arreglo = [3 ,25 ,68 ,1 ,53];
+
+        document.getElementById('add_after_me6').innerText+="El arreglo es : ("+ arreglo + ")\n";
+        
+        
+        
+        arreglo.sort(function(a, b){return a-b});
+        
+        document.getElementById('add_after_me6').innerText+="El arreglo ordenado es : ("+ arreglo + ")";
+                </code></pre>
+              
+          </div>
+          <button class="btn btn-secondary mt-3"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom6" aria-controls="offcanvasBottom" onclick="agregarcodigo('codigo6','add_after_me6')">Probar codigo</button>
+
+          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom6" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header d-flex justify-content-center">
+              <h5 class="offcanvas-title" id="offcanvasBottomLabel">Sumar todos los valores de un array</h5>
+              
+               <button type="button" class="btn-close btn-secondary text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+                <div class="offcanvas-body small" id="add_after_me6">
+                
+                </div>
+          </div>
+          <!-- final de colapse -->
+        </div> 
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Ejercicio 7 -->
+<div class="row justify-content-center">
+  <div class="col-sm-5" id="ej7">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Ejercicio 7</h5>
+        <p class="card-text">Filtrar numeros negativos</p>
+        
+        <p>
+          <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample" id="boton7" onclick="cambiartexto('boton7')">
+            Ver codigo
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample7">
+          <div class="card card-body">
+            <pre>
+            <code class="language-javascript text-wrap"contenteditable="true" id="codigo7">
+              let numeros = [2,-5,4,24,-67];
+let resultado = numeros.filter((item) =>  item > 0);
+document.getElementById('add_after_me7').innerHTML+=resultado;
+                </code></pre>
+              
+          </div>
+          <button class="btn btn-secondary mt-3"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom7" aria-controls="offcanvasBottom" onclick="agregarcodigo('codigo7','add_after_me7')">Probar codigo</button>
+
+          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom7" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header d-flex justify-content-center">
+              <h5 class="offcanvas-title" id="offcanvasBottomLabel">Filtrar numeros negativos</h5>
+              
+               <button type="button" class="btn-close btn-secondary text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+                <div class="offcanvas-body small" id="add_after_me7">
+                
+                </div>
+          </div>
+          <!-- final de colapse -->
+        </div> 
+       
+      </div>
+    </div>
+  </div>
+<!-- Ejercicio 8 -->
+<div class="col-sm-5  mt-5 mt-sm-0" id="ej8">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Ejercicio 8</h5>
+        <p class="card-text">Remover espacios en un String</p>
+        
+        <p>
+          <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample8" aria-expanded="false" aria-controls="collapseExample"id="boton8" onclick="cambiartexto('boton8')">
+            Ver codigo
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample8">
+          <div class="card card-body">
+            <pre>
+            <code class="language-javascript text-wrap"contenteditable="true" id="codigo8">
+              let frase = ("Esta frase es solo prueba \n");
+
+              document.getElementById('add_after_me8').innerText+=frase;
+              
+              document.getElementById('add_after_me8').innerText+=frase.replace(/ /g, "");
+              
+        
+                </code></pre>
+              
+          </div>
+          <button class="btn btn-secondary mt-3"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom8" aria-controls="offcanvasBottom" onclick="agregarcodigo('codigo8','add_after_me8')">Probar codigo</button>
+
+          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom8" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header d-flex justify-content-center">
+              <h5 class="offcanvas-title" id="offcanvasBottomLabel">Remover espacios en un String</h5>
+              
+               <button type="button" class="btn-close btn-secondary text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+                <div class="offcanvas-body small" id="add_after_me8">
+                  
+                </div>
+          </div>
+          <!-- final de colapse -->
+        </div> 
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Ejercicio 9 -->
+<div class="row justify-content-center">
+<div class="col-sm-5" id="ej9">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Ejercicio 9</h5>
+        <p class="card-text">Determinar si un numero es divisible entre 10</p>
+        
+        <p>
+          <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample9" aria-expanded="false" aria-controls="collapseExample"id="boton9" onclick="cambiartexto('boton9')">
+            Ver codigo
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample9">
+          <div class="card card-body">
+            <pre>
+            <code class="language-javascript text-wrap"contenteditable="true" id="codigo9">
+              
+              let number = prompt("Dame un numero");
+              if (number % 10 == 0 ){
+                document.getElementById('add_after_me9').innerText+="El numero "+number+" es divisible entre 10";
+               number = "" 
+              }
+              else{
+              let resultado = false;
+              document.getElementById('add_after_me9').innerText="El numero "+number+" no es divisible entre 10";
+              number = "" 
+              }
+
+            
+                </code></pre>
+              
+          </div>
+          <button class="btn btn-secondary mt-3"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom9" aria-controls="offcanvasBottom" onclick="agregarcodigo('codigo9','add_after_me19')">Probar codigo</button>
+
+          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom9" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header d-flex justify-content-center">
+              <h5 class="offcanvas-title" id="offcanvasBottomLabel">Determinar si un numero es divisible entre 10</h5>
+              
+               <button type="button" class="btn-close btn-secondary text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+                <div class="offcanvas-body small" id="add_after_me9">
+           
+                </div>
+          </div>
+          <!-- final de colapse -->
+        </div> 
+       
+      </div>
+    </div>
+  </div>
+<!-- Ejercicio 10 -->
+<div class="col-sm-5  mt-5 mt-sm-0" id="ej10">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Ejercicio 10</h5>
+        <p class="card-text">Contar las vocales</p>
+        
+        <p>
+          <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample10" aria-expanded="false" aria-controls="collapseExample"id="boton10" onclick="cambiartexto('boton10')">
+            Ver codigo
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample10">
+          <div class="card card-body ">
+            <pre>
+            <code class="language-javascript text-wrap " contenteditable="true" id="codigo10">
+              const vocales = ["a", "e", "i", "o", "u"]
+              
+              let string = prompt('Dite algo ahi ');
+              let resultado = contarvocales(string);
+              document.getElementById('add_after_me10').innerText+=resultado + " vocales en el texto introducido";
+              function contarvocales(str) {
+                let contar = 0;
+                for (let letra of str.toLowerCase()) {
+                    if (vocales.includes(letra)) {
+                        contar++;
+                    }
+                }
+                return contar
+               }
+              
+                </code></pre>
+              
+          </div>
+          <button class="btn btn-secondary mt-3"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom10" aria-controls="offcanvasBottom" onclick="agregarcodigo('codigo10','add_after_me10')">Probar codigo</button>
+
+          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom10" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header d-flex justify-content-center">
+              <h5 class="offcanvas-title" id="offcanvasBottomLabel">Contar las vocales</h5>
+              
+               <button type="button" class="btn-close btn-secondary text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+                <div class="offcanvas-body small" id="add_after_me10">
+               
+                </div>
+          </div>
+          <!-- final de colapse -->
+        </div> 
+       
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+<!-- Fin de ejercicios -->
+</div>
+</body>
+</html>
